@@ -82,6 +82,15 @@ function exportCSS () {
 class CPT_COLOR_SELECTOR extends React.Component {
 
     render() {
+
+        let breaker = null;
+
+        if (this.props.hasBreaker === false) {
+            breaker = null;
+        } else {
+            breaker = <br/>
+        }
+
         return (
             <div>
                 <div>
@@ -91,7 +100,7 @@ class CPT_COLOR_SELECTOR extends React.Component {
                     <input className={this.props.type + "-id color-selector"} onChange={e => changeColor(e.target)} maxLength="7" type="text" id={this.props.type} name={this.props.type} defaultValue={this.props.hex}/>
                     <label for={this.props.type}>{this.props.type.charAt(0).toUpperCase() + this.props.type.slice(1) + " color"}</label>
                 </div>
-                <br/>
+                {breaker}
             </div>
         );
     }

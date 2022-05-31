@@ -22,6 +22,9 @@ class CPT_CSS_AREA extends React.Component {
     render() {
         return (
             <div>
+                <p style={{fontWeight: 'bold'}}>EXPORT CSS SETTINGS</p>
+                <p>Simply copy the contents of the textfield below and insert it into your stylesheet!</p>
+                <p>If the field is empty, click <span style={{fontWeight: 'bold'}}>Export</span> this will also <span style={{fontWeight: 'bold'}}>Copy to clipboard</span></p>
                 <button className="dark dark-border light-text" onClick={exportCSS}>Export</button>
                 <br/>
                 <input type="text" id={this.props.identifier} spellCheck={false} placeholder="Some CSS..." className="text-input hex-input" readOnly={true}/>
